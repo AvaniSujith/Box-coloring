@@ -89,13 +89,16 @@ generateGridBtn.addEventListener("click", ()=>{
 
 colorBtn.addEventListener("click", () => {
 
-    
-
     const rowNum = parseInt(colorY.value);
     const colNum = parseInt(colorX.value);
 
     const inputRow = parseInt(yAxisLength.value);
     const inputCol = parseInt(xAxisLength.value);
+
+    if(!rowNum || !colNum){
+        alert('Information missing. Fill in both Row and Column');
+        return;
+    }
 
     if(rowNum > inputRow || rowNum <= 0 || colNum > inputCol || colNum <= 0){
         alert(`${rowNum} x ${colNum} not present, Try another input`);

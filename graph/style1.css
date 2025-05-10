@@ -28,10 +28,10 @@
     /* color: #ffffff;
      */
 
-     background:  linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #c7b835);
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
-    margin-bottom: 30px ;
+    background:  linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #c7b835);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
     
 }
 
@@ -74,7 +74,7 @@ body{
     font-weight: 700;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
-    /* padding-left: 90px; */
+    /* padding-left: 90px; */ 
 }
 
 .box{
@@ -107,12 +107,13 @@ body{
 }
 
 .grid-body{
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     max-width: 1050px;
-    width: 65vw;
-    min-height: 600px;
+    width: 65%;   
+    max-height: 750px;
+    height: 100%;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius:12px ;
@@ -121,8 +122,9 @@ body{
 }
 
 .grid-container{
-    max-width: 100%;
+    max-width:  100%;
     max-height: 100%;
+    height: 100%;
     overflow: auto;
 }
 
@@ -180,6 +182,7 @@ input{
     border-radius: 12px;
     outline: none;
     border: 1px solid transparent;
+    width: inherit;
 }
 
 .main-content{
@@ -242,9 +245,8 @@ input{
 }
 
 #colorSelected{
-    height: inherit;
+    height: 43px;
 }
-
 
 /* @media screen and (max-width:1385px){
 
@@ -302,6 +304,27 @@ input{
         padding: 0 30px;
         /* gap: 60px; */
     }
+
+    .main-content{
+        flex-direction: column;
+    }
+
+    .grid-body{
+        width: 100%;
+    }
+
+    .coloring-block{
+        width: 60%;
+    }
+
+    .identifier{
+        justify-content: space-between;
+    }
+
+
+    #colorSelected{
+        width: inherit;
+    }
 }
 
 
@@ -316,14 +339,18 @@ input{
         font-size: 20px;
     }
 
-    .input-btns label{
+    /* .input-btns label{
         font-size: 14px;
-    }
+    } */
 
     .row-block,
     .column-block{
         justify-content: space-between;
         padding: 0 30px;
         /* gap: 60px; */
+    }
+
+    .coloring-block{
+        width: 100%;
     }
 }
