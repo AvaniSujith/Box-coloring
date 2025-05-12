@@ -79,8 +79,6 @@ generateGridBtn.addEventListener("click", ()=>{
             box.innerHTML = `
                 <p class="box-num">${row + 1} x ${col + 1} </p>
             `
-
-
             gridContainer.appendChild(box);
         }
 

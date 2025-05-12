@@ -166,7 +166,7 @@ body{
 .identifier{
     width: 100%;
     display: flex;
-    
+    justify-content: space-around;
 }
 .input-btns{
     display: flex;
@@ -352,5 +352,11 @@ input{
 
     .coloring-block{
         width: 100%;
+    }
+}
+
+@media screen and (max-width:470px){
+    .input-btns label {
+        font-size: 14px;
     }
 }
