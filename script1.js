@@ -108,6 +108,11 @@ colorBtn.addEventListener("click", () => {
     if(box){
 
         box.style.backgroundColor = `${colorPicker.value}`;
+
+        colorX.disabled = true;
+        colorY.disabled = true;
+        colorPicker.disabled = true;
+
         colorBtn.style.display = 'none';
         clearBtn.style.display = 'block';
     }
@@ -129,6 +134,11 @@ clearBtn.addEventListener("click", () => {
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
         box.style.backgroundColor = '';
+
+        colorX.disabled = false;
+        colorY.disabled = false;
+        colorPicker.disabled = false;
+
         clearBtn.style.display ='none';
         colorBtn.style.display = 'block';
     })
